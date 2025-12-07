@@ -1,0 +1,7 @@
+1;1;Corrida Leve;20;8.5;1
+1;2;Bicicleta Estacionária;30;12;1
+2;3;Supino;80;4;10;60;1
+2;4;Agachamento;100;3;12;90;1
+1;5;Pular Corda;15;15;1
+2;6;Rosca Direta;30;3;8;45;1
+1;7;Bicicleta;20;8;1

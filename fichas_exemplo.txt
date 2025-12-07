@@ -1,0 +1,6 @@
+1;Treino A - Perna;3,4,5
+2;Treino B - Braço;6,2
+3;Treino Cardio;1,2,5
+1;Treino A - Perna;3;3;4;5
+2;Treino B - Braço;2;6;2
+3;Treino Cardio;3;1;2;5
