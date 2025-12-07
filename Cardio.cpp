@@ -27,7 +27,7 @@ void Cardio::exibirDetalhes() const {
     std::cout << "========================\n";
 }
 
-// Calcular tempo estimado (duração em minutos)
+// Calcular tempo estimado (duracao em minutos)
 double Cardio::calcularTempoEstimado() const {
     return duracao;
 }
@@ -37,12 +37,12 @@ double Cardio::calcularCaloriasGastas() const {
     return duracao * caloriasPorMinuto;
 }
 
-// Retornar tipo do exercício (1 = Cardio)
+// Retornar tipo do exercicio (1 = Cardio)
 int Cardio::getTipo() const {
     return 1;
 }
 
-// Getter de duração
+// Getter de duracao
 int Cardio::getDuracao() const {
     return duracao;
 }

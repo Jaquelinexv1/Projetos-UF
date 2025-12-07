@@ -1,5 +1,5 @@
 1;1;Corrida Leve;20;8.5;1
-1;2;Bicicleta Estacionária;30;12.0;1
+1;2;Bicicleta Estacionaria;30;12.0;1
 2;3;Supino;80.0;4;10;60;1
 2;4;Agachamento;100.0;3;12;90;1
 1;5;Pular Corda;15;15.0;1

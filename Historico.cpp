@@ -5,15 +5,15 @@
 #include <iomanip>
 #include <sstream>
 
-// Adicionar registro ao histórico
+// Adicionar registro ao historico
 void Historico::adicionarRegistro(const RegistroTreino& registro) {
     registros.push_back(registro);
 }
 
-// Exibir histórico completo
+// Exibir historico completo
 void Historico::exibirHistorico() const {
     std::cout << "\n========================================\n";
-    std::cout << "        HISTÓRICO DE TREINOS\n";
+    std::cout << "        HISTORICO DE TREINOS\n";
     std::cout << "========================================\n";
     
     if (registros.empty()) {
@@ -44,11 +44,11 @@ const std::vector<RegistroTreino>& Historico::getRegistros() const {
     return registros;
 }
 
-// Carregar histórico do arquivo
+// Carregar historico do arquivo
 void Historico::carregarDeArquivo() {
     std::ifstream arquivo("historico.txt");
     if (!arquivo.is_open()) {
-        // Arquivo não existe, começa vazio (não é erro)
+        // Arquivo nao existe, comeca vazio (nao e erro)
         return;
     }
     std::string linha;
@@ -78,11 +78,11 @@ void Historico::carregarDeArquivo() {
     arquivo.close();
 }
 
-// Salvar histórico no arquivo
+// Salvar historico no arquivo
 void Historico::salvarEmArquivo() const {
     std::ofstream arquivo("historico.txt");
     if (!arquivo.is_open()) {
-        std::cerr << "Erro ao abrir arquivo histórico para escrita.\n";
+        std::cerr << "Erro ao abrir arquivo historico para escrita.\n";
         return;
     }
     for (const auto& registro : registros) {

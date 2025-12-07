@@ -44,10 +44,10 @@ void Ficha::exibirFicha() const {
     std::cout << "----------------------------------------\n";
     
     if (exercicios.empty()) {
-        std::cout << "Nenhum exercício adicionado.\n";
+        std::cout << "Nenhum exercicio adicionado.\n";
     } else {
         for (size_t i = 0; i < exercicios.size(); ++i) {
-            std::cout << "\n[Exercício " << (i + 1) << "]\n";
+            std::cout << "\n[Exercicio " << (i + 1) << "]\n";
             exercicios[i]->exibirDetalhes();
         }
     }

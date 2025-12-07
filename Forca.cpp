@@ -36,9 +36,9 @@ void Forca::exibirDetalhes() const {
 
 // Calcular tempo estimado (em minutos)
 double Forca::calcularTempoEstimado() const {
-    // Tempo = (séries * (repeticoes + descanso entre repetições)) + (descanso entre séries)
-    // Aproximadamente: tempo por série = 30 segundos + tempo de descanso
-    double tempoSerieSegundos = (repeticoes * 2) + tempoDescanso; // 2 segundos por repetição
+    // Tempo = (series * (repeticoes + descanso entre repeticoes)) + (descanso entre series)
+    // Aproximadamente: tempo por serie = 30 segundos + tempo de descanso
+    double tempoSerieSegundos = (repeticoes * 2) + tempoDescanso; // 2 segundos por repeticao
     double tempoTotalSegundos = (series * tempoSerieSegundos);
     return tempoTotalSegundos / 60.0; // Converter para minutos
 }
@@ -50,7 +50,7 @@ double Forca::calcularCaloriasGastas() const {
     return caloriasBase;
 }
 
-// Retornar tipo do exercício (2 = Força)
+// Retornar tipo do exercicio (2 = Forca)
 int Forca::getTipo() const {
     return 2;
 }

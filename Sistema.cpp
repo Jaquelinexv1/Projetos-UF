@@ -70,7 +70,7 @@ void Sistema::carregarDados() {
                         }
                     }
                 } catch (...) {
-                    std::cerr << "Erro ao carregar exercício.\n";
+                    std::cerr << "Erro ao carregar exercicio.\n";
                 }
             }
         }
@@ -166,22 +166,22 @@ Ficha* Sistema::buscarFichaPorId(int id) {
 }
 
 void Sistema::cadastrarExercicio() {
-    std::cout << "\n=== CADASTRAR EXERCÍCIO ===\n";
-    std::cout << "Tipo de exercício:\n";
+    std::cout << "\n=== CADASTRAR EXERCICIO ===\n";
+    std::cout << "Tipo de exercicio:\n";
     std::cout << "1. Cardio\n";
-    std::cout << "2. Força\n";
-    std::cout << "Opção: ";
+    std::cout << "2. Forca\n";
+    std::cout << "Opcao: ";
     
     int opcao;
     std::cin >> opcao;
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     
-    std::cout << "Nome do exercício: ";
+    std::cout << "Nome do exercicio: ";
     std::string nome;
     std::getline(std::cin, nome);
     
     if (opcao == 1) {
-        std::cout << "Duração (minutos): ";
+        std::cout << "Duracao (minutos): ";
         int duracao;
         std::cin >> duracao;
         std::cout << "Calorias por minuto: ";
@@ -190,15 +190,15 @@ void Sistema::cadastrarExercicio() {
         std::cin.ignore();
         
         exercicios.push_back(new Cardio(nome, duracao, calorias));
-        std::cout << "Exercício Cardio cadastrado com sucesso!\n";
+        std::cout << "Exercicio Cardio cadastrado com sucesso!\n";
     } else if (opcao == 2) {
         std::cout << "Carga (kg): ";
         double carga;
         std::cin >> carga;
-        std::cout << "Séries: ";
+        std::cout << "Series: ";
         int series;
         std::cin >> series;
-        std::cout << "Repetições: ";
+        std::cout << "Repeticoes: ";
         int repeticoes;
         std::cin >> repeticoes;
         std::cout << "Tempo de descanso (segundos): ";
@@ -207,14 +207,14 @@ void Sistema::cadastrarExercicio() {
         std::cin.ignore();
         
         exercicios.push_back(new Forca(nome, carga, series, repeticoes, tempo));
-        std::cout << "Exercício de Força cadastrado com sucesso!\n";
+        std::cout << "Exercicio de Forca cadastrado com sucesso!\n";
     } else {
-        std::cout << "Opção inválida.\n";
+        std::cout << "Opcao invalida.\n";
     }
 }
 
 void Sistema::listarExercicios() {
-    std::cout << "\n=== EXERCÍCIOS CADASTRADOS ===\n";
+    std::cout << "\n=== EXERCICIOS CADASTRADOS ===\n";
     
     if (exercicios.empty()) {
         std::cout << "Nenhum exercício cadastrado.\n";
@@ -228,7 +228,7 @@ void Sistema::listarExercicios() {
 }
 
 void Sistema::excluirExercicio() {
-    std::cout << "\n=== EXCLUIR EXERCÍCIO ===\n";
+    std::cout << "\n=== EXCLUIR EXERCICIO ===\n";
     
     if (exercicios.empty()) {
         std::cout << "Nenhum exercício cadastrado.\n";
@@ -237,7 +237,7 @@ void Sistema::excluirExercicio() {
     
     listarExercicios();
     
-    std::cout << "\nID do exercício a excluir: ";
+    std::cout << "\nID do exercicio a excluir: ";
     int id;
     std::cin >> id;
     std::cin.ignore();
@@ -245,7 +245,7 @@ void Sistema::excluirExercicio() {
     Exercicio* ex = buscarExercicioPorId(id);
     if (ex) {
         ex->desativar();
-        std::cout << "Exercício desativado com sucesso.\n";
+        std::cout << "Exercicio desativado com sucesso.\n";
     } else {
         std::cout << "Exercício não encontrado.\n";
     }
@@ -262,14 +262,14 @@ void Sistema::criarFicha() {
 }
 
 void Sistema::adicionarExercicioFicha() {
-    std::cout << "\n=== ADICIONAR EXERCÍCIO À FICHA ===\n";
+    std::cout << "\n=== ADICIONAR EXERCICIO A FICHA ===\n";
     
     if (fichas.empty()) {
         std::cout << "Nenhuma ficha cadastrada.\n";
         return;
     }
     
-    std::cout << "\nFichas disponíveis:\n";
+    std::cout << "\nFichas disponiveis:\n";
     for (size_t i = 0; i < fichas.size(); ++i) {
         std::cout << "[" << (i + 1) << "] ID: " << fichas[i]->getId() 
                   << " - " << fichas[i]->getNome() << "\n";
@@ -291,13 +291,13 @@ void Sistema::adicionarExercicioFicha() {
         return;
     }
     
-    std::cout << "\nExercícios disponíveis:\n";
+    std::cout << "\nExercicios disponiveis:\n";
     for (size_t i = 0; i < exercicios.size(); ++i) {
         std::cout << "[" << (i + 1) << "] ID: " << exercicios[i]->getId() 
                   << " - " << exercicios[i]->getNome() << "\n";
     }
     
-    std::cout << "\nID do exercício: ";
+    std::cout << "\nID do exercicio: ";
     int idExercicio;
     std::cin >> idExercicio;
     std::cin.ignore();
@@ -305,7 +305,7 @@ void Sistema::adicionarExercicioFicha() {
     Exercicio* ex = buscarExercicioPorId(idExercicio);
     if (ex) {
         ficha->adicionarExercicio(ex);
-        std::cout << "Exercício adicionado à ficha com sucesso!\n";
+        std::cout << "Exercicio adicionado a ficha com sucesso!\n";
     } else {
         std::cout << "Exercício não encontrado.\n";
     }
@@ -333,7 +333,7 @@ void Sistema::registrarTreino() {
         return;
     }
     
-    std::cout << "Fichas disponíveis:\n";
+    std::cout << "Fichas disponiveis:\n";
     for (size_t i = 0; i < fichas.size(); ++i) {
         std::cout << "[" << (i + 1) << "] ID: " << fichas[i]->getId() 
                   << " - " << fichas[i]->getNome() << "\n";
@@ -351,7 +351,7 @@ void Sistema::registrarTreino() {
     }
     
     if (ficha->getExercicios().empty()) {
-        std::cout << "Ficha sem exercícios. Adicione exercícios antes de registrar.\n";
+        std::cout << "Ficha sem exercicios. Adicione exercicios antes de registrar.\n";
         return;
     }
     
